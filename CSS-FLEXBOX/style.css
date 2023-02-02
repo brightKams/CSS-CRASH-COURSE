@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    
+    max-width: 800px;
+    min-height: 400px;
+    color: #fff;
+    margin-inline: auto;
+    border: 1px solid #000;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: row-reverse;
+    flex-wrap: wrap; */
+
+    /* Shorthand for "FLEX-DIRECTION & FLEX-WRAP */
+    /* flex-flow: row wrap; */
+    align-content: space-around ;
+
+    
+}
+
+.box {
+    /* min-width: 100px; */
+    height: 100px;
+    background-color: #000;
+    font-size: 2rem;
+    padding:0.5rem;
+    color: #fff;
+
+    /* Styling Flexed items */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* flex-grow: 1; */
+    /* flex-shrink: 1;
+    flex-basis: 100px; */
+
+    /* Shorthand for flex-grow, flex-shrink and flex-basis */
+
+    flex: 1 1 100px;
+    /* Here the first value is the "GROW", the second value is the "SHRINK" and the third value is the "BASIS" */
+ 
+}
+
+.box:nth-child(2) {
+    /* flex-grow: 2; */
+    /* flex-shrink: 2; */
+    
+    /* shorthand for flex-grow, flex-shrink and flex-basis */
+
+    flex: 2 2 100px;
+    order: -11;
+
+}
+
+/* Removed to style first two Flexed Items */
+/* .box:nth-of-type(3), .box:nth-of-type(4), .box:nth-of-type(5), .box:nth-of-type(6) {
+    display: none;
+} */
+
+
+
+/* Check out flexboxfroggy.com to understand flexbox the more */
