@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+
+/* Begin Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+/* End reset */
+
+
+
+/* Utility classes */
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+/* End Utility classes */
+body {
+    font-family: "Nunito", sans-serif;
+    min-height: 100vh;
+    background-color: aliceblue;
+    /* background-image:url(./img/OHAKAM-BRIGHT-Picture.jpg),
+                    
+                    linear-gradient(to left, #000, #fff);
+                    background-repeat: repeat-y, no-repeat;
+                    background-position: left center;
+                    background-size: center auto; */
+
+/* Background Shorthand */
+
+    background: repeat-y right center 
+                url("./img/OHAKAM-BRIGHT-Picture.jpg"), no-repeat linear-gradient(to left, steelblue, #fff);
+                background-size: 50% auto ;
+           
+    
+    
+}
+
+
+.example {
+    margin-top: 1rem;
+    padding-left: 20px;
+    border: 1px solid red;
+}
+
+.example img {
+    width: 25%;
+    height: auto;
+    display: block;
+
+}
+
+
+.container {
+
+    /* setting up Background images */
+    
+    background-color: rgb(251, 210, 156);
+    background-image: url("./img/OHAKAM-BRIGHT-Picture.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.hero {
+    border-bottom:2px solid #000;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: calc(2rem - 2px);
+    
+    background-color: hsla(0, 0%, 100%, 0.2);
+
+
+    
+    
+    
+}
+
+.profile-pic-figure {
+    width: 35%;
+
+}
+
+.profile-pic-figure img {
+    width: 100%;
+    height: auto;
+    min-width: 100px;
+    border: 5px double gray;
+    /* border-radius: 50%; */
+}
+
+
+h1 {
+    font-size: 500%;
+    /* color: aliceblue; */
+    text-shadow: 2px 2px 1px #fff;
+    width: 60%;
+    text-align: center;
+    padding: o.25rem;
+    border-radius: 10px;
+}
+
+/* CLIPPING BACKGROUND INAGES TO TEXT */
+
+.clip {
+    font-weight: 800;
+    font-size: 18rem;
+    text-align: center;
+    background-image: url("./img/OHAKAM-BRIGHT-Picture.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: hsl(0, 0%, 0%, 0.2);
+    background-position: top;
+}
+
+.clip:nth-child(2) {
+    background-position: center;
+}
+.clip:nth-child(3) {
+    background-position: bottom;
+}
+
+/* END OF CLIPPING BACKGROUND IMAGE TO TEXT */
