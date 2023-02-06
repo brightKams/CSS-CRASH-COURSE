@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
-/* MEDIA QUERY SYNTAX: */
-
-/* @media media-type and (condition: breakpoint) {
-    //CSS RULES
-    
-} */
 
 /* || RESET */
 
@@ -59,6 +53,12 @@ main {
 footer {
     bottom: 0;
 }
+
+
+
+
+
+
 
 /* || SMALL SCREEN */
 
