@@ -65,14 +65,29 @@ nav {
   justify-content: space-evenly;
 }
 
-nav a:link,
+/* nav a:link,
 nav a:visited {
   color: black;
 }
 
-nav a:hover,
+|| OR a Shorthand code for Pseudo classes of "a" tags in the "nav" bar */
+
+nav :any-link {
+  color: #00f;
+}
+
+/* nav a:hover,
 nav a:focus {
   color: hsla(0, 0%, 20%, 0.6);
+}
+|| OR a Shorthand code for Pseudo classes of "a" tags in the "nav" bar */
+
+nav :is(a:hover, a:focus) {
+  color: hsla(0, 0%, 20%, 0.6);
+}
+
+nav a:active {
+  color: #f00;
 }
 
 main {
@@ -105,6 +120,9 @@ footer {
   justify-content: center;
 }
 
+.card:target {
+  border: 5px solid #00000050;
+}
 .card figure {
   display: flex;
   flex-flow: column nowrap;
@@ -117,12 +135,66 @@ footer {
   border-radius: 50%;
 }
 
+.card img[alt] {
+  border: 8px double red;
+}
+.card img:not([alt]) {
+  border: 18px double green;
+}
+
+/* nth-child pseudo class */
+.card:is(:nth-child(2), :nth-child(3)) {
+  background-color: papayawhip;
+}
+/* || End of Pseudo Classes  */
+
+/* Beginning of Pseudo Elements */
+
 .card figcaption {
   font-weight: bolder;
   font-size: 2rem;
   margin: 1rem;
   text-align: center;
 }
+
+.card figcaption::after {
+  content: " Hello ";
+  display: block;
+  border: 1px solid;
+
+}
+.card figcaption::first-letter {
+  
+  font-size: 2em;
+  color: #333;
+
+}
+
+.card p {
+    position: relative;
+}
+
+.card p::before {
+  content: open-quote;
+  font-size: 2em;
+  position: absolute;
+  top: -0.25em;
+  left: -0.5em;
+  
+}
+.card p::first-line {
+    font-size: 1.5em;
+    color: #475569;
+}
+
+.card p::after {
+    content: close-quote;
+    font-size: 2em;
+    position: absolute;
+    top: -0.25em;
+    right: -0.5em;
+}
+
 
 /* || SMALL SCREEN */
 
@@ -136,7 +208,6 @@ footer {
     justify-content: center;
     flex-flow: row wrap;
     padding: 1rem;
-
   }
 
   .card {
@@ -164,11 +235,10 @@ footer {
 
   nav {
     display: none;
-    
   }
 
   .card {
-    width:  min(100%, 325px);
+    width: min(100%, 325px);
   }
 
   .card figure {
@@ -177,11 +247,10 @@ footer {
 
   .card figcaption {
     margin: 0.1em 0;
-}
+  }
 
-.card p {
+  .card p {
     margin-top: 1rem;
-
   }
 }
 /* || LARGE SCREEN */
@@ -191,7 +260,6 @@ footer {
     background-color: firebrick;
     background-image: radial-gradient(whitesmoke, firebrick);
   }
-
 
   .card {
     width: min(100%, 400px);
@@ -221,7 +289,7 @@ footer {
     background-image: radial-gradient(whitesmoke, dodgerblue);
   }
 
-  h1{
+  h1 {
     font-size: 1.5rem;
   }
 
@@ -237,7 +305,6 @@ footer {
 
   .card {
     width: min(calc(33% - 0.25rem), 200px);
-
   }
 
   .card figure {
@@ -248,11 +315,8 @@ footer {
     margin: 0.1rem;
   }
 
-  .card figcaption, .card p {
+  .card figcaption,
+  .card p {
     font-size: 1.25rem;
   }
-
-
-  
-
 }

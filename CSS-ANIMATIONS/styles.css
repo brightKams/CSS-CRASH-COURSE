@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+/* || RESET */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* || UNIVERSAL */
+
+html {
+    font-size: 1.5rem;
+    font-family: "Nunito", sans-serif;
+}
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+
+}
+
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 30px;
+    /* border: 1px dashed ; */
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    display: grid;
+    place-content: center;
+    /* transition: all 2s; */
+}
+
+
+
+div:first-child {
+    background-color: dodgerblue;
+    color: #fff;
+    /* transform: translateX(-50%); */
+    /* transform: rotateX(180deg); */
+    /* transform: scaleX(150%); */
+    /* transform: skewX(-135deg); */
+    z-index: 5;
+    outline: none;
+    border: 1px dashed #fff;
+}
+div:nth-child(2) {
+    background-color: purple;
+    color: #fff;
+    /* transform: translateY(-2rem); */
+    /* transform: rotateY(180deg); */
+    /* transform: scaleY(150%); */
+    /* transform: skewY(-135deg); */
+    z-index: 2;
+}
+div:last-child {
+    background-color: #00f;
+    color: #fff;
+    /* transform: translate(80%, -5rem); */
+    /* transform: rotateZ(45deg); */
+    /* transform: scale(50%, 0.5); */
+    /* transform: skew(135deg, 120deg); */
+    z-index: 1;
+}
+
+
+div:hover {
+    background-color: midnightblue;
+    /* transition-property: background-color, transform;
+    transition-duration: 2s 3s;
+    transition-delay: .5s; */
+
+    transition: all 2s linear 0.5s;
+    
+}
+div:is(:last-child:hover) {
+    
+    /* transform: rotate(180deg); */
+    z-index: 1;
+}
+
+
+
+/* || ANIMATIONS - Check CSS Video tutorials @ 8hrs: 10mins: */
+
+.animate {
+    /* animation-name: slide;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out ;
+    animation-delay: 1s;
+    animation-iteration-count: 2;
+    animation-direction: normal;
+    animation-fill-mode: forwards; */
+
+    /* || ANIMATION SHORTHAND */
+
+    animation: slide 5s ease-in-out 1s 2 normal forwards;
+}
+
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    33% {
+        transform: translateX(300px) rotate(180deg);
+    }
+    66% {
+        transform: translateX(-300px) rotate(-180deg);
+    }
+    100% {
+        transform: translateX(0);
+        background-color: rebeccapurple;
+    }
+}
