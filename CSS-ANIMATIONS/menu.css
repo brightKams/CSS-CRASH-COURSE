@@ -90,7 +90,7 @@ header {
 /* || Check CSS Tutorial video @ 8hrs: 27mins */
 :is(header:hover, header:focus-within) .menu-icon {
     background-color: transparent;
-    transform: rotate(36 0deg);
+    transform: rotate(360deg);
     transition: transform 2s;
     
    
